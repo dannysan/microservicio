@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "25e4489d-d0a0-4f19-96a2-b30273adf5b4",
+		"name": "dqu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:7006/api/Clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"clieId\": 0,\r\n  \"persId\": 0,\r\n  \"clieContrasenia\": \"1245\",\r\n  \"clieEstado\": true,\r\n  \"persNombre\": \"Juan Osorio\",\r\n  \"persGenero\": \"Masculino\",\r\n  \"persEdad\": 20,\r\n  \"persIdentificacion\": \"1234567893\",\r\n  \"persDireccion\": \"13 junio y Equinoccial\",\r\n  \"persTelefono\": \"098874587\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7006/api/Cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cuenId\": 0,\r\n  \"clieId\": 3,\r\n  \"cuenNumero\": \"58554\",\r\n  \"cuenTipo\": \"Corriente\",\r\n  \"cuenSaldoInicial\": 1000,\r\n  \"cuenEstado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7006/api/Movimientos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NumeroCuenta\": \"496825\",\r\n  \"Fecha\": \"2022-08-07T11:21:00\",\r\n  \"Valor\": -540\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7006/api/Reportes?Cliente=Marielena Montalvo&FechaDesde=2022-08-07&FechaHasta=2022-08-8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/Reportes?Cliente=Marielena Montalvo&FechaDesde=2022-08-07&FechaHasta=2022-08-8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"Reportes"
+					],
+					"query": [
+						{
+							"key": "Cliente",
+							"value": "Marielena Montalvo"
+						},
+						{
+							"key": "FechaDesde",
+							"value": "2022-08-07"
+						},
+						{
+							"key": "FechaHasta",
+							"value": "2022-08-8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
